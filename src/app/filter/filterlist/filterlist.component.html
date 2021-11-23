@@ -1,0 +1,22 @@
+<!--<form [formGroup]="sliders">-->
+<!--  R: <input type="range"  formControlName="slider_radius" min="1" max="100" value="50" class="slider" id="radius">-->
+<!--  R: <input type="range"  formControlName="slider_stroke-width" min="1" max="4" value="4  " class="slider" id="stroke-width">-->
+<!--</form>-->
+<svg width="960" height="50">
+  <line x1 = "0" y1 = "25" x2 = "900" y2 = "25" [attr.style] = "'stroke:hsl('+((fluidValue)*360)/100+', 100%, 35%); stroke-width:20'"/>
+  <polyline [attr.points]="fluidValue*9+',10, '+fluidValue*9+',40'" style="fill: none; stroke: white; stroke-width: 4" />
+  <text [attr.x]="(fluidValue*9)+5" y="50" fill="purple">{{fluidValue.toFixed(2)}}%</text>
+</svg>
+<!--<svg width="100" height="100">-->
+<!--  <circle cx="50" cy="50" [attr.r]="sliderValues.radius" stroke="green" [attr.stroke-width]="sliderValues.strokewidth" fill="yellow" />-->
+<!--</svg>-->
+<!--{{sliderValues.radius}}-->
+<!--{{sliderValues.strokewidth}}-->
+<!--{{targetValue}}-->
+<!--{{fluidValue}}-->
+<!--{{percentOfAllVegs}}%-->
+<ul>
+  <li class="item-list" *ngFor="let vegetable of searchVegetablesList">
+    {{vegetable}}
+  </li>
+</ul>

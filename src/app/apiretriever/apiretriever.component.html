@@ -1,0 +1,7 @@
+<button (click)="getMeme()">Load XKCD</button>
+<h1 *ngIf="isLoading">loading{{loadingDots}}</h1>
+<div *ngIf="!isLoading" class="meme">
+  <h1>{{meme.title}}</h1>
+  <p>{{meme.alt}}</p>
+  <img src="{{meme.img}}">
+</div>

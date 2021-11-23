@@ -1,0 +1,9 @@
+.item-list {
+  padding: 0.2em 0.5em;
+  background: #125699;
+  margin: 0.2em 0.1em;
+  width: 200px;
+  color: #e6ebf1;
+  list-style: none;
+  display: inline-block;
+}
